@@ -12,4 +12,7 @@ node = Rosemary::Node.new(:lat => -80.0 , :lon => -120.0)
 api.save(node, changeset) 
 #This line, saves your code, and gives you a number. That's the "node" you've added to maps, and it's accessible here : api06.dev.openstreetmap.org/node/THAT_GLORIOUS_NUMBER 
 
+node.add_tags("amenity" => "restaurant", :name => "Penguin Shop") 
+#This is an example of adding tags to what you added to map!
+
 api.close_changeset(changeset)
